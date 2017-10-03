@@ -1,0 +1,12 @@
+aside {
+  display: block;
+  color: #424447;
+}
+
+.chat-rooms {
+  position: static; margin:0 auto 0 auto; width:400px;
+}
+
+.left-background {
+  background-color:#a9acb2; width:20%; height:100%; position:absolute; top:0; left: 0;
+}

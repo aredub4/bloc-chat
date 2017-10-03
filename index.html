@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="Bloc Chat">
+ <head lang="en">
+   <title>Bloc Jams</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,800,600,700,300">
+        <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <meta charset="UTF-8">
+        <title>Bloc Chat</title>
+ </head>
+ <body>
+   <div class="chat-rooms">
+   <aside>
+    <h1>Bloc Chat</h1>
+    <h4>Room 1</h4>
+    <h4>Room 2</h4>
+    <h4>Room 3</h4>
+  </aside>
+</div>
+<div class="left-background"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <ui-view></ui-view>
+
+     <!-- Angular -->
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+    <!-- AngularUI Router -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+    <!-- FireBase -->
+     <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+     <!-- AngularFire -->
+     <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBitMD23r1se3aqAYCT1FsFKIgbcBFgr28",
+    authDomain: "bloc-chat-d6c39.firebaseapp.com",
+    databaseURL: "https://bloc-chat-d6c39.firebaseio.com",
+    projectId: "bloc-chat-d6c39",
+    storageBucket: "bloc-chat-d6c39.appspot.com",
+    messagingSenderId: "776211769426"
+  };
+  firebase.initializeApp(config);
+</script>
+
+     <!-- Application Files -->
+     <script src="/scripts/app.js"></script>
+ </body>
+ </html>
