@@ -1,0 +1,45 @@
+<section class="main-header">
+    <div class="header-cell">
+        <h2>Bloc Chat <button type="button" class="btn" ng-click="home.chatRooms.open()">New Room</button></h2>
+        <ul ng-repeat="room in home.chatRooms.all">
+            <!--<li class="room-list" ng-click="home.getChatContents(room.$id); home.roomName = room.roomName">{{room.roomName}}</li>-->
+            <li class="room-list" ng-click="home.getChatContents(room.$id, room)">{{room.roomName}}</li>
+        </ul>
+    </div>
+    <div class="header-cell room-cont">
+        <h4>{{home.roomName}} </h4>
+        <div ng-repeat="contents in home.chatContents">
+            <div class="user"> <h4 ng-bind-html="contents.username"></h4></div>
+            <div ng-bind-html="contents.content"></div>
+            <div class="size" ng-bind-html="contents.sentAt"></div>
+
+        </div>
+    </div>
+
+
+</section>
+..
+<!-- Include an external template into the album view -->
+<!--<ng-include src="'/templates/initiateWindow.html'"></ng-include>-->
+
+<section class="modal-initiate">
+
+    <script type="text/ng-template" id="modalContent.html">
+        <div>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Create New Room</h3>
+            </div>
+
+            <div class="modal-body" id="modal-body">
+                <input type="text" ng-model="modal.roomName">Enter a room name<br>
+            </div>
+
+            <div class="modal-footer">
+                <button ng-click="modal.ok()">Create room</button>
+                <button ng-click="modal.cancel()">Cancel</button>
+            </div>
+        </div>
+    </script>
+
+</section>
+test
