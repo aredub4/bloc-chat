@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Bloc Chat Project</title>
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+    <section class="modal-username-initiate">
+
+    <script type="text/ng-template" id="modalUsernameContent.html">
+        <div>
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Set a Username</h3>
+            </div>
+
+            <div class="modal-body" id="modal-body">
+                <input type="text" ng-model="modalUser.username">This name will appear when you need messages<br>
+            </div>
+
+            <div class="modal-footer">
+                <button ng-click="modalUser.ok()">Set username</button>
+            </div>
+        </div>
+    </script>
+
+</section>
+
+    <a ui-sref="home">home</a>
+
+    <ui-view></ui-view>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+
+    <!-- Angular Cookies Module -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase-messaging.js"></script>
+    <script>
+        // Initialize the Firebase SDK
+        var config = {
+          apiKey: '084285d3a06f06fc1861c51cbe2aab93ffbf3e09',
+          authDomain: 'bloc-projects.firebaseapp.com',
+          databaseURL: 'https://bloc-projects.firebaseio.com'
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- Latest compiled Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled Angular UI Bootsrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.2.0/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/services/ChatRooms.js"></script>
+    <script src="/scripts/services/Message.js"></script>
+    <script src="/scripts/controllers/HomeCtrl.js"></script>
+    <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/controllers/ModalUserCtrl.js"></script>
+
+</body>
+</html>

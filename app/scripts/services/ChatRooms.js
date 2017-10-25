@@ -35,11 +35,10 @@
  * @param    : {number} size, parentSelector - I'm not using these, they are here just for future use.
  **/
       ChatRooms.open = function (size, parentSelector) {
-         // var parentElem = parentSelector ?
-          //angular.element($document[0].querySelector('.modal-initiate ' + parentSelector)) : undefined;
+
             var parentElem = angular.element($document[0].querySelector('.modal-initiate '));
             console.log("parentelem: "+parentElem);
-          //var modalInstance = $uibModal.open({
+
           $uibModal.open({
               animation: animationsEnabled,
               ariaLabelledBy: 'modal-title',
@@ -50,11 +49,9 @@
               size: size,
               appendTo: parentElem,
               resolve: {
-                //createRoom: function () {
-                //  return this.ChatRooms.createRoom;
-                //}
+
               }
-       });
+           });
       };
 
       return ChatRooms;
